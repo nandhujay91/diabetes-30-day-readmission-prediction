@@ -1,0 +1,2 @@
+model,test_encounters,actual_readmissions,readmission_rate,threshold,pr_auc,roc_auc,brier_score,precision,recall,f1_score,true_negatives,false_positives,false_negatives,true_positives,flagged_encounters,flagged_rate
+LightGBM,20024,2272,0.11346384338793448,0.15,0.21447514732688205,0.6708259712057836,0.09630843582313343,0.21397797989468645,0.39348591549295775,0.2772093023255814,14468,3284,1378,894,4178,0.20864962045545346

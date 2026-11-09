@@ -1,0 +1,45 @@
+feature,feature_group,feature_type,missing_count,missing_percentage,unique_values
+race,Demographics,Categorical,0,0.0,6
+gender,Demographics,Categorical,0,0.0,3
+age,Demographics,Categorical,0,0.0,10
+admission_type_id,Admission,Categorical,0,0.0,8
+discharge_disposition_id,Admission,Categorical,0,0.0,23
+admission_source_id,Admission,Categorical,0,0.0,16
+time_in_hospital,Hospital stay,Numerical,0,0.0,14
+payer_code,Healthcare,Categorical,0,0.0,18
+medical_specialty,Healthcare,Categorical,0,0.0,72
+num_lab_procedures,Hospital stay,Numerical,0,0.0,116
+num_procedures,Hospital stay,Numerical,0,0.0,7
+num_medications,Hospital stay,Numerical,0,0.0,75
+number_outpatient,Previous visits,Numerical,0,0.0,38
+number_emergency,Previous visits,Numerical,0,0.0,24
+number_inpatient,Previous visits,Numerical,0,0.0,21
+diag_1,Clinical,Categorical,13,0.02,694
+diag_2,Clinical,Categorical,286,0.36,718
+diag_3,Clinical,Categorical,1142,1.43,763
+number_diagnoses,Hospital stay,Numerical,0,0.0,16
+max_glu_serum,Clinical,Categorical,75938,94.82,3
+A1Cresult,Clinical,Categorical,66586,83.14,3
+metformin,Medication,Categorical,0,0.0,4
+repaglinide,Medication,Categorical,0,0.0,4
+nateglinide,Medication,Categorical,0,0.0,4
+chlorpropamide,Medication,Categorical,0,0.0,4
+glimepiride,Medication,Categorical,0,0.0,4
+acetohexamide,Medication,Categorical,0,0.0,2
+glipizide,Medication,Categorical,0,0.0,4
+glyburide,Medication,Categorical,0,0.0,4
+tolbutamide,Medication,Categorical,0,0.0,2
+pioglitazone,Medication,Categorical,0,0.0,4
+rosiglitazone,Medication,Categorical,0,0.0,4
+acarbose,Medication,Categorical,0,0.0,4
+miglitol,Medication,Categorical,0,0.0,4
+troglitazone,Medication,Categorical,0,0.0,2
+tolazamide,Medication,Categorical,0,0.0,3
+insulin,Medication,Categorical,0,0.0,4
+glyburide-metformin,Medication,Categorical,0,0.0,4
+glipizide-metformin,Medication,Categorical,0,0.0,2
+glimepiride-pioglitazone,Medication,Categorical,0,0.0,2
+metformin-rosiglitazone,Medication,Categorical,0,0.0,2
+metformin-pioglitazone,Medication,Categorical,0,0.0,2
+change,Medication,Categorical,0,0.0,2
+diabetesMed,Medication,Categorical,0,0.0,2

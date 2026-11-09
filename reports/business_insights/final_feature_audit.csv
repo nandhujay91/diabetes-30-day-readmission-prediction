@@ -1,0 +1,31 @@
+feature,feature_type,missing_percentage,audit_decision
+time_in_hospital,Numerical,0.0,Prediction-time review
+num_lab_procedures,Numerical,0.0,Prediction-time review
+num_procedures,Numerical,0.0,Prediction-time review
+num_medications,Numerical,0.0,Prediction-time review
+number_diagnoses,Numerical,0.0,Prediction-time review
+number_inpatient,Numerical,0.0,Candidate
+number_outpatient,Numerical,0.0,Candidate
+number_emergency,Numerical,0.0,Candidate
+race,Categorical,0.0,Fairness analysis
+gender,Categorical,0.0,Fairness analysis
+age,Categorical,0.0,Candidate
+admission_type_id,Categorical,0.0,Candidate
+admission_source_id,Categorical,0.0,Candidate
+discharge_disposition_id,Categorical,0.0,Prediction-time review
+payer_code,Categorical,0.0,Candidate
+medical_specialty,Categorical,0.0,Candidate
+diag_1,Categorical,0.02,Prediction-time review
+diag_2,Categorical,0.36,Prediction-time review
+diag_3,Categorical,1.43,Prediction-time review
+max_glu_serum,Categorical,94.82,Investigate missingness
+A1Cresult,Categorical,83.14,Investigate missingness
+metformin,Categorical,0.0,Prediction-time review
+glimepiride,Categorical,0.0,Prediction-time review
+glipizide,Categorical,0.0,Prediction-time review
+glyburide,Categorical,0.0,Prediction-time review
+pioglitazone,Categorical,0.0,Prediction-time review
+rosiglitazone,Categorical,0.0,Prediction-time review
+insulin,Categorical,0.0,Prediction-time review
+change,Categorical,0.0,Prediction-time review
+diabetesMed,Categorical,0.0,Prediction-time review

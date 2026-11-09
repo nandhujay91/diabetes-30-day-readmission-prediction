@@ -1,0 +1,5 @@
+feature,missing_status,encounters,readmitted,readmission_rate
+max_glu_serum,Available,4152,517,12.45
+max_glu_serum,Missing,75938,8568,11.28
+A1Cresult,Available,13504,1319,9.77
+A1Cresult,Missing,66586,7766,11.66

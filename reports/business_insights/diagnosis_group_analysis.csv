@@ -1,0 +1,58 @@
+diagnosis_feature,category,encounters,readmitted,readmission_rate
+diag_1,Blood diseases,883,121,13.7
+diag_1,Circulatory diseases,23796,2751,11.56
+diag_1,Congenital conditions,45,4,8.89
+diag_1,Digestive diseases,7261,766,10.55
+diag_1,Endocrine and metabolic diseases,9130,1193,13.07
+diag_1,External causes (E-codes),1,0,0.0
+diag_1,Genitourinary diseases,4034,433,10.73
+diag_1,Infectious diseases,2098,269,12.82
+diag_1,Injury and poisoning,5493,674,12.27
+diag_1,Mental disorders,1794,216,12.04
+diag_1,Musculoskeletal diseases,3983,380,9.54
+diag_1,Neoplasms,2629,273,10.38
+diag_1,Nervous system and sensory diseases,962,107,11.12
+diag_1,Pregnancy-related conditions,547,30,5.48
+diag_1,Respiratory diseases,8033,903,11.24
+diag_1,Skin diseases,1991,191,9.59
+diag_1,Supplementary factors (V-codes),1307,221,16.91
+diag_1,Symptoms and abnormal findings,6090,548,9.0
+diag_1,Unknown,13,5,38.46
+diag_2,Blood diseases,2322,233,10.03
+diag_2,Circulatory diseases,24622,2736,11.11
+diag_2,Congenital conditions,78,7,8.97
+diag_2,Digestive diseases,3088,370,11.98
+diag_2,Endocrine and metabolic diseases,16685,1837,11.01
+diag_2,External causes (E-codes),580,81,13.97
+diag_2,Genitourinary diseases,6325,767,12.13
+diag_2,Infectious diseases,1495,181,12.11
+diag_2,Injury and poisoning,1936,214,11.05
+diag_2,Mental disorders,2119,218,10.29
+diag_2,Musculoskeletal diseases,1394,144,10.33
+diag_2,Neoplasms,1996,307,15.38
+diag_2,Nervous system and sensory diseases,989,125,12.64
+diag_2,Pregnancy-related conditions,325,12,3.69
+diag_2,Respiratory diseases,7885,870,11.03
+diag_2,Skin diseases,2877,406,14.11
+diag_2,Supplementary factors (V-codes),1447,154,10.64
+diag_2,Symptoms and abnormal findings,3641,399,10.96
+diag_2,Unknown,286,24,8.39
+diag_3,Blood diseases,1962,222,11.31
+diag_3,Circulatory diseases,23488,2546,10.84
+diag_3,Congenital conditions,76,8,10.53
+diag_3,Digestive diseases,2822,341,12.08
+diag_3,Endocrine and metabolic diseases,20781,2169,10.44
+diag_3,External causes (E-codes),973,110,11.31
+diag_3,Genitourinary diseases,4967,714,14.37
+diag_3,Infectious diseases,1456,173,11.88
+diag_3,Injury and poisoning,1542,177,11.48
+diag_3,Mental disorders,2493,294,11.79
+diag_3,Musculoskeletal diseases,1532,169,11.03
+diag_3,Neoplasms,1416,215,15.18
+diag_3,Nervous system and sensory diseases,1385,163,11.77
+diag_3,Pregnancy-related conditions,249,7,2.81
+diag_3,Respiratory diseases,5243,657,12.53
+diag_3,Skin diseases,1981,287,14.49
+diag_3,Supplementary factors (V-codes),3003,293,9.76
+diag_3,Symptoms and abnormal findings,3579,467,13.05
+diag_3,Unknown,1142,73,6.39

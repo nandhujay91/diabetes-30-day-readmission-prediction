@@ -1,0 +1,31 @@
+feature,feature_type,missing_percentage,adjusted_p_value,significant,selection_status
+time_in_hospital,Numerical,0.0,5.662933295737737e-54,True,Candidate
+num_lab_procedures,Numerical,0.0,5.323593156575659e-11,True,Candidate
+num_procedures,Numerical,0.0,0.3436677706203463,False,Review
+num_medications,Numerical,0.0,1.8377805834627902e-39,True,Candidate
+number_diagnoses,Numerical,0.0,4.821216816264458e-49,True,Candidate
+number_inpatient,Numerical,0.0,0.0,True,Candidate
+number_outpatient,Numerical,0.0,1.2475752693693331e-25,True,Candidate
+number_emergency,Numerical,0.0,3.3303315835408954e-73,True,Candidate
+race,Categorical,0.0,0.00014917674059832732,True,Candidate
+gender,Categorical,0.0,0.4535442062059758,False,Review
+age,Categorical,0.0,7.730982694993695e-19,True,Candidate
+admission_type_id,Categorical,0.0,3.055004876519355e-05,True,Candidate
+admission_source_id,Categorical,0.0,3.0579680949683275e-06,True,Candidate
+discharge_disposition_id,Categorical,0.0,2.091549126442793e-211,True,Candidate
+payer_code,Categorical,0.0,2.447570192918827e-10,True,Candidate
+medical_specialty,Categorical,0.0,3.9646249465295375e-34,True,Candidate
+diag_1,Categorical,0.02,2.207300619446824e-72,True,Candidate
+diag_2,Categorical,0.36,3.378354755058697e-30,True,Candidate
+diag_3,Categorical,1.43,7.67490826384726e-39,True,Candidate
+max_glu_serum,Categorical,94.82,0.09586574246107052,False,Investigate missingness
+A1Cresult,Categorical,83.14,0.6615067572657873,False,Investigate missingness
+metformin,Categorical,0.0,9.553562116110956e-13,True,Candidate
+glimepiride,Categorical,0.0,0.12053103304717709,False,Review
+glipizide,Categorical,0.0,0.004965561467471598,True,Candidate
+glyburide,Categorical,0.0,0.37772960712665093,False,Review
+pioglitazone,Categorical,0.0,0.08212955768803074,False,Review
+rosiglitazone,Categorical,0.0,0.37772960712665093,False,Review
+insulin,Categorical,0.0,1.2126651609272134e-34,True,Candidate
+change,Categorical,0.0,9.504817033557991e-07,True,Candidate
+diabetesMed,Categorical,0.0,7.829654593898745e-12,True,Candidate

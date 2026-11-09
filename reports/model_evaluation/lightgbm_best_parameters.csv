@@ -1,0 +1,2 @@
+classifier__subsample,classifier__reg_lambda,classifier__num_leaves,classifier__n_estimators,classifier__min_child_samples,classifier__max_depth,classifier__learning_rate,classifier__colsample_bytree
+0.8,1,15,200,20,5,0.08,0.8

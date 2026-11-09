@@ -1,0 +1,49 @@
+column,category,decision,data_type,missing_count,missing_percentage,unique_values
+encounter_id,Identifier,Exclude,int64,0,0.0,100114
+patient_nbr,Identifier,Exclude,int64,0,0.0,70439
+race,Candidate feature,Review,str,0,0.0,6
+gender,Candidate feature,Review,str,0,0.0,3
+age,Candidate feature,Review,str,0,0.0,10
+admission_type_id,Candidate feature,Review,int64,0,0.0,8
+discharge_disposition_id,Candidate feature,Review,int64,0,0.0,23
+admission_source_id,Candidate feature,Review,int64,0,0.0,17
+time_in_hospital,Candidate feature,Review,int64,0,0.0,14
+payer_code,Candidate feature,Review,str,0,0.0,18
+medical_specialty,Candidate feature,Review,str,0,0.0,73
+num_lab_procedures,Candidate feature,Review,int64,0,0.0,118
+num_procedures,Candidate feature,Review,int64,0,0.0,7
+num_medications,Candidate feature,Review,int64,0,0.0,75
+number_outpatient,Candidate feature,Review,int64,0,0.0,39
+number_emergency,Candidate feature,Review,int64,0,0.0,33
+number_inpatient,Candidate feature,Review,int64,0,0.0,21
+diag_1,Candidate feature,Review,str,21,0.02,715
+diag_2,Candidate feature,Review,str,358,0.36,747
+diag_3,Candidate feature,Review,str,1421,1.42,787
+number_diagnoses,Candidate feature,Review,int64,0,0.0,16
+max_glu_serum,Candidate feature,Review,str,94890,94.78,3
+A1Cresult,Candidate feature,Review,str,83238,83.14,3
+metformin,Candidate feature,Review,str,0,0.0,4
+repaglinide,Candidate feature,Review,str,0,0.0,4
+nateglinide,Candidate feature,Review,str,0,0.0,4
+chlorpropamide,Candidate feature,Review,str,0,0.0,4
+glimepiride,Candidate feature,Review,str,0,0.0,4
+acetohexamide,Candidate feature,Review,str,0,0.0,2
+glipizide,Candidate feature,Review,str,0,0.0,4
+glyburide,Candidate feature,Review,str,0,0.0,4
+tolbutamide,Candidate feature,Review,str,0,0.0,2
+pioglitazone,Candidate feature,Review,str,0,0.0,4
+rosiglitazone,Candidate feature,Review,str,0,0.0,4
+acarbose,Candidate feature,Review,str,0,0.0,4
+miglitol,Candidate feature,Review,str,0,0.0,4
+troglitazone,Candidate feature,Review,str,0,0.0,2
+tolazamide,Candidate feature,Review,str,0,0.0,3
+insulin,Candidate feature,Review,str,0,0.0,4
+glyburide-metformin,Candidate feature,Review,str,0,0.0,4
+glipizide-metformin,Candidate feature,Review,str,0,0.0,2
+glimepiride-pioglitazone,Candidate feature,Review,str,0,0.0,2
+metformin-rosiglitazone,Candidate feature,Review,str,0,0.0,2
+metformin-pioglitazone,Candidate feature,Review,str,0,0.0,2
+change,Candidate feature,Review,str,0,0.0,2
+diabetesMed,Candidate feature,Review,str,0,0.0,2
+readmitted,Target,Exclude,str,0,0.0,3
+readmitted_30_days,Target,Exclude,int64,0,0.0,2
