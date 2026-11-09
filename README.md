@@ -1,10 +1,12 @@
 # Diabetes 30-Day Hospital Readmission Prediction
 
-An end-to-end machine learning project to predict the risk of hospital readmission within 30 days for patients with diabetes. The project covers data quality, exploratory analysis, feature engineering, model development, explainability, fairness evaluation and REST API deployment.
+An end-to-end machine learning project to predict the risk of hospital readmission within 30 days for patients with diabetes.
+
+The project covers data quality assessment, exploratory data analysis, patient-level data splitting, feature engineering, machine learning, model explainability, calibration, fairness evaluation, and REST API development.
 
 ---
 
-## Project Overview
+## 1. Project Overview
 
 Hospital readmission is an important challenge in healthcare. Identifying patients who may return to hospital within 30 days can help healthcare teams prioritize follow-up and improve discharge planning.
 
@@ -12,17 +14,17 @@ This project develops a machine learning system that estimates the probability o
 
 **Business objective:** Identify higher-risk encounters and support data-driven discharge planning and follow-up prioritization.
 
-**Project domain:** Healthcare Analytics
+**Domain:** Healthcare Analytics
 
 **Project type:** End-to-End Data Science and Machine Learning
 
 ---
 
-## Dataset
+## 2. Dataset
 
 **Dataset:** Diabetes 130-US Hospitals for Years 1999–2008
 
-**Source:** [UCI Machine Learning Repository – Diabetes 130-US Hospitals](https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008)
+**Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/296/diabetes+130+us+hospitals+for+years+1999+2008)
 
 The dataset contains historical hospital encounters for patients with diabetes.
 
@@ -33,7 +35,7 @@ The dataset contains historical hospital encounters for patients with diabetes.
 | Unique patients | 71,518 |
 | Eligible encounters | 100,114 |
 | Excluded encounters | 1,652 |
-| Readmission within 30 days | 11.16% |
+| Eligible cohort readmission prevalence | 11.16% |
 
 ### Target Definition
 
@@ -52,7 +54,7 @@ Death-related discharge encounters were excluded from the modelling cohort.
 
 ---
 
-## Project Workflow
+## 3. Project Workflow
 
 1. Data loading and validation
 2. Data quality assessment
@@ -71,7 +73,7 @@ Death-related discharge encounters were excluded from the modelling cohort.
 
 ---
 
-## Data Preparation and Quality
+## 4. Data Preparation and Quality
 
 The data preparation process includes:
 
@@ -84,13 +86,13 @@ The data preparation process includes:
 - Patient encounter history analysis
 - Data quality and feature availability audits
 
-High-missingness columns such as weight, glucose serum results and HbA1c results were investigated.
+High-missingness columns such as weight, glucose serum results, and HbA1c results were investigated.
 
 Missing glucose and HbA1c results were represented as `Not_Tested` in engineered features, indicating that no result was recorded.
 
 ---
 
-## Feature Engineering
+## 5. Feature Engineering
 
 The project creates 27 engineered features across different categories.
 
@@ -117,7 +119,7 @@ The prediction point is assumed to be discharge, after discharge destination and
 
 ---
 
-## Model Development
+## 6. Model Development
 
 Four machine learning algorithms were evaluated:
 
@@ -132,20 +134,30 @@ Hyperparameter tuning was performed for XGBoost and LightGBM.
 
 To avoid patient-level data leakage, the project uses `StratifiedGroupKFold` with patient identifiers as groups.
 
-- Training encounters: 80,090
-- Test encounters: 20,024
+| Dataset split | Encounters |
+|---|---:|
+| Training | 80,090 |
+| Testing | 20,024 |
+
+Additional validation details:
+
 - No patient overlap between training and test sets.
-- Cross-validation: 5 folds.
+- Five-fold group-aware cross-validation.
+- Preprocessing is fitted inside each training fold.
 
-Numerical preprocessing uses median imputation and standard scaling.
+### Data Preprocessing
 
-Categorical preprocessing uses most-frequent imputation and one-hot encoding.
+**Numerical features:**
+- Median imputation
+- Standard scaling
 
-Preprocessing is fitted inside each training fold to prevent data leakage.
+**Categorical features:**
+- Most-frequent imputation
+- One-hot encoding
 
 ---
 
-## Final Model: LightGBM
+## 7. Final Model: LightGBM
 
 LightGBM was selected based on its cross-validation performance.
 
@@ -163,7 +175,7 @@ LightGBM was selected based on its cross-validation performance.
 | Recall | 0.3935 |
 | F1-score | 0.2772 |
 
-Precision, recall and F1-score are measured at the analytical threshold of 0.15.
+Precision, recall, and F1-score are measured at the analytical threshold of 0.15.
 
 ### Confusion Matrix
 
@@ -178,7 +190,7 @@ The threshold of 0.15 is an analytical reference, not a clinically approved deci
 
 ---
 
-## Model Explainability
+## 8. Model Explainability
 
 SHAP (SHapley Additive exPlanations) is used to understand model behaviour.
 
@@ -203,7 +215,7 @@ SHAP values describe the model's learned associations. They do not establish cli
 
 ---
 
-## Model Calibration
+## 9. Model Calibration
 
 The final model was evaluated using an independent test set.
 
@@ -219,7 +231,7 @@ This assessment does not establish calibration in contemporary hospital populati
 
 ---
 
-## Fairness Evaluation
+## 10. Fairness Evaluation
 
 The project evaluates model performance across:
 
@@ -241,7 +253,7 @@ The project does not claim that the model is free from bias.
 
 ---
 
-## REST API – FastAPI
+## 11. REST API – FastAPI
 
 The trained LightGBM model is exposed through a FastAPI application.
 
@@ -253,24 +265,6 @@ The trained LightGBM model is exposed through a FastAPI application.
 | GET | `/health` | Application health check |
 | POST | `/predict` | Predict readmission risk |
 
-### Run Locally
-
-Install dependencies:
-
-```bash
-uv sync
-```
-
-Start the API:
-
-```bash
-uv run python run.py
-```
-
-Open Swagger documentation:
-
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-
 ### Prediction Output
 
 The API returns:
@@ -278,11 +272,68 @@ The API returns:
 - Predicted probability
 - Predicted status (`High Risk` or `Lower Risk`)
 
-The current prediction endpoint expects the 25 engineered model features. It does not yet accept raw hospital records and automatically perform the full feature-engineering process.
+The prediction endpoint expects 25 engineered model features. It does not yet accept raw hospital records and automatically perform the full feature-engineering process.
 
 ---
 
-## Testing and Code Quality
+## 12. Installation and Setup
+
+### Prerequisites
+
+- Python 3.11
+- Git
+- uv package manager
+
+### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/nandhujay91/diabetes-30-day-readmission-prediction.git
+
+cd diabetes-30-day-readmission-prediction
+```
+
+### Step 2: Install dependencies
+
+Install [uv](https://docs.astral.sh/uv/) if it is not already installed.
+
+```bash
+uv sync
+```
+
+### Step 3: Verify model artifacts
+
+The repository includes the following trained model pipelines:
+
+```text
+artifacts/
+├── lightgbm_tuned_pipeline.joblib
+├── logistic_regression_pipeline.joblib
+└── xgboost_tuned_pipeline.joblib
+```
+
+The FastAPI prediction endpoint currently uses the trained LightGBM pipeline.
+
+### Step 4: Run automated tests
+
+```bash
+uv run pytest -v
+```
+
+### Step 5: Start the FastAPI application
+
+```bash
+uv run python run.py
+```
+
+### Step 6: Access API documentation
+
+Open the following URL in your browser:
+
+http://127.0.0.1:8000/docs
+
+---
+
+## 13. Testing and Code Quality
 
 Automated tests cover:
 
@@ -294,7 +345,7 @@ Automated tests cover:
 - API endpoints
 - API configuration
 
-**Current validation results:**
+### Current Validation Results
 
 - Pytest: 11 tests passed
 - Ruff lint: All checks passed
@@ -320,16 +371,19 @@ uv run ruff format --check src api config tests run.py
 
 ---
 
-## Project Structure
+## 14. Project Structure
 
 ```text
-project1_Diabetes 30-Day Hospital Readmission Prediction/
+diabetes-30-day-readmission-prediction/
 │
 ├── api/
+│   ├── __init__.py
 │   └── main.py
 │
 ├── artifacts/
-│   └── Trained model pipelines
+│   ├── lightgbm_tuned_pipeline.joblib
+│   ├── logistic_regression_pipeline.joblib
+│   └── xgboost_tuned_pipeline.joblib
 │
 ├── config/
 │   ├── logging_config.py
@@ -339,8 +393,6 @@ project1_Diabetes 30-Day Hospital Readmission Prediction/
 │   ├── raw/
 │   ├── interim/
 │   └── processed/
-│
-├── notebooks/
 │
 ├── reports/
 │   ├── business_insights/
@@ -370,7 +422,7 @@ project1_Diabetes 30-Day Hospital Readmission Prediction/
 
 ---
 
-## Technologies
+## 15. Technologies
 
 | Category | Technologies |
 |---|---|
@@ -384,20 +436,22 @@ project1_Diabetes 30-Day Hospital Readmission Prediction/
 | Testing | Pytest |
 | Code quality | Ruff |
 | Environment | uv |
-| Version control | Git |
+| Version control | Git, GitHub |
 
 ---
 
-## Limitations
+## 16. Limitations
 
 - The dataset contains historical records from 1999–2008.
 - Model performance may not generalize to modern hospitals or different healthcare populations.
 - The model has not undergone external clinical validation.
 - The selected prediction threshold is not clinically approved.
 - Predictions must not be used as the sole basis for patient-care decisions.
-- Additional security, privacy, monitoring and clinical governance work is required before real-world deployment.
+- Additional security, privacy, monitoring, and clinical governance work is required before real-world deployment.
 
-## Future Improvements
+---
+
+## 17. Future Improvements
 
 - Integrate raw hospital records with the complete feature-engineering pipeline.
 - Add stronger API input schemas and business-rule validation.
@@ -408,6 +462,8 @@ project1_Diabetes 30-Day Hospital Readmission Prediction/
 - Establish clinical governance and deployment controls.
 
 ---
+
+## 18. Model Visualizations
 
 ### Global SHAP Summary
 
@@ -433,10 +489,15 @@ project1_Diabetes 30-Day Hospital Readmission Prediction/
 
 ![Gender Group Recall](reports/figures/lightgbm_fairness_gender_recall.png)
 
-## Author
+---
+
+## 19. Author
 
 **Nandini Arjunan**
 
 MSc Computer Science – Data Science & Analytics  
 EPITA, France
 
+---
+
+**Disclaimer:** This project is for educational and research purposes. It is not a clinically validated medical decision-making system.
